@@ -33,6 +33,7 @@ class NetboxClient(AsyncClient):
             if res.status_code == 429:
                 res.raise_for_status()
             return res
+
         return await _do_rqst()
 
     async def paginate(

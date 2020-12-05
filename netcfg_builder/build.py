@@ -102,10 +102,10 @@ def render(template_fp: Path, **tvars) -> str:
 
     env.globals["raise"] = _gfunc_raise
 
-    env.tests['None'] = lambda pred: pred is None
-    env.tests['contains'] = lambda val, pred: val in pred
-    env.tests['startswith'] = lambda val, pred: val.startswith(pred)
+    env.tests["None"] = lambda pred: pred is None
+    env.tests["contains"] = lambda val, pred: val in pred
+    env.tests["startswith"] = lambda val, pred: val.startswith(pred)
 
-    env.filters['ifaces_numeric'] = _filter_ifaces_numeric
+    env.filters["ifaces_numeric"] = _filter_ifaces_numeric
     template = env.get_template(template_fp.name)
     return template.render(tvars)
