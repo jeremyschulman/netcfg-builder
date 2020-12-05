@@ -1,0 +1,6 @@
+click
+jinja2
+httpx
+envtoml
+envyaml
+tenacity
